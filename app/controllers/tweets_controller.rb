@@ -7,7 +7,10 @@ class TweetsController < ApplicationController
     @tweet = Tweet.create(tweet_params)
     @tweet.user_id = current_user.id
     @tweet.save
-    TweetScheduler.set(wait_until: @tweet.time).schedule(@tweet.content)
+    #scheduled with Job
+    #TweetScheduler.set(wait_until: @tweet.time).schedule(@tweet)
+    #test to post tweet now
+    @tweet.user.twitter.update(@tweet.content)
     redirect_to tweets_path
   end
 

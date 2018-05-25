@@ -1,0 +1,8 @@
+<h1>Tweets</h1>
+
+<% @tweets.each do |tweet| %>
+  <h4>Scheduled for </h4>
+  <p><%= tweet.time %></p>
+  <h4>Content:</h4>
+  <p><%= tweet.content %></p>
+<% end %>
