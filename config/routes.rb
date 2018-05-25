@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root 'tweets#new'
   resources :tweets
   get '/login', to: 'sessions#new'
+  get '/logout', to: 'sessions#destroy'
   get '/auth/twitter/callback', to: 'sessions#create'
 end

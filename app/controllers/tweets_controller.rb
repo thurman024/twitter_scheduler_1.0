@@ -1,4 +1,6 @@
 class TweetsController < ApplicationController
+  before_action :signed_in?
+  
   def new
     @tweet = Tweet.new
   end
@@ -9,7 +11,6 @@ class TweetsController < ApplicationController
     @tweet.save
     #scheduled with Job
     TweetScheduler.set(wait_until: @tweet.time).perform_later(@tweet)
-    print Time.current
     #test to post tweet now
     #@tweet.post_to_twitter
     redirect_to tweets_path
