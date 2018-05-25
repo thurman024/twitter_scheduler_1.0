@@ -1,7 +1,7 @@
 class TweetScheduler < ApplicationJob
 
-  def schedule(tweet)
-    tweet.user.twitter.update(tweet.content)
+  def perform(tweet)
+    tweet.post_to_twitter
   end
 
 end
