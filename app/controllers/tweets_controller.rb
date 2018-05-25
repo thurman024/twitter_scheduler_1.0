@@ -5,6 +5,8 @@ class TweetsController < ApplicationController
 
   def create
     @tweet = Tweet.create(tweet_params)
+    @tweet.user_id = current_user.id
+    @tweet.save
     TweetScheduler.set(wait_until: @tweet.time).schedule(@tweet.content)
     redirect_to tweets_path
   end
