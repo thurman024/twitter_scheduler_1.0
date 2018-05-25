@@ -12,6 +12,8 @@ gem 'omniauth-twitter'
 gem 'twitter'
 #environment to store keys
 gem 'dotenv-rails'
+#use sidekiq for scheduling
+gem 'sidekiq'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
