@@ -13,4 +13,9 @@
  *= require_tree .
  *= require_self
  */
-@import "materialize"
+@import "materialize";
+
+.datetime select {
+  display: inline-grid;
+  width: auto;
+}

@@ -3,9 +3,9 @@
 <%= form_for @tweet do |f| %>
   <%= f.label :content %>
   <%= f.text_area :content %><br>
-<div class="input-field">
+<div class="datetime col s3">
   <%= f.label :time %><br>
-  <%= f.datetime_select :time, class: "timepicker"%><br>
+  <%= f.datetime_select :time, class: "col s2"%><br>
 
 </div>
 
