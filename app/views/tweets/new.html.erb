@@ -1,0 +1,11 @@
+<h2>Schedule a Tweet</h2>
+
+<%= form_for @tweet do |f| %>
+  <%= f.label :content %>
+  <%= f.text_area :content %><br>
+
+  <%= f.label :time %>
+  <%= f.datetime_select :time %><br>
+
+  <%= f.submit "Schedule Tweet" %>
+<% end %>
