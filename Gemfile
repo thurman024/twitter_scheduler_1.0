@@ -14,6 +14,8 @@ gem 'twitter'
 gem 'dotenv-rails'
 #use sidekiq for scheduling
 gem 'sidekiq'
+# css framework for styling
+gem 'materialize-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
