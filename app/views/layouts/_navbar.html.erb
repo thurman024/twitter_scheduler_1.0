@@ -1,0 +1,9 @@
+<div class="nav-wrapper blue lighten-3">
+  <ul>
+    <li> <%= link_to "New Tweet", new_tweet_path %></li>
+    <li><%= link_to "Tweet Queue", tweets_path %></li>
+    <li class = "right"><a href="/logout" >Log Out</a></li>
+    <li class="right">Signed In as <%= current_user.name %></li>
+  </ul>
+
+</div>

@@ -9,6 +9,21 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar-fixed blue lighten-3">
+      <nav class="blue lighten-3">
+        <%= render 'layouts/navbar' if current_user %>
+      </nav>
+    </div>
+
+    <div id="flash-msg">
+      <% if flash[:message] %>
+        <p style = "color:red;"> <%= flash[:message] %></p>
+      <% end %>
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
   </body>
 </html>
