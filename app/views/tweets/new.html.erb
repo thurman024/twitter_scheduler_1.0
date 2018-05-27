@@ -3,12 +3,10 @@
 <%= form_for @tweet do |f| %>
   <%= f.label :content %>
   <%= f.text_area :content %><br>
-<div class="datetime col s3">
-  <%= f.label :time %><br>
-  <%= f.datetime_select :time, class: "col s2"%><br>
-
-</div>
-
-
+  <div class="datetime">
+    <%= f.label :time %><br>
+    <%= f.datetime_select :time %><br>
+  </div>
+  <br>
   <%= f.submit "Schedule Tweet" %>
 <% end %>

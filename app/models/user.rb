@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :tweets
 
   def self.find_or_create_from_omniauth(auth)
     if user = User.find_by(uid: auth['uid'])

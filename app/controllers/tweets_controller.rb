@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   before_action :signed_in?
-  
+
   def new
     @tweet = Tweet.new
   end
@@ -17,7 +17,7 @@ class TweetsController < ApplicationController
   end
 
   def index
-    @tweets = Tweet.all
+    @tweets = current_user.tweets
   end
 
 
