@@ -1,9 +1,12 @@
 <h1>Tweets</h1>
 
 <% @tweets.each do |tweet| %>
-  <h4>Content:</h4>
+  <h5>Content:</h5>
   <p><%= tweet.content %></p>
-  <p><strong>Scheduled for: </strong> <%= tweet.time %></p>
-  <p><strong>Status: </strong><%= tweet.status %> </p>
+  <% if tweet.status == "scheduled" %>
+    <p><strong>Scheduled for: </strong> <%= format_time(tweet.time) %></p>
+  <% else %>
+    <p><strong>Posted at: </strong><%= format_time(tweet.time) %> </p>
+  <% end %>
   <div class="divider"></div>
 <% end %>

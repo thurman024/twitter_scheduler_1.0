@@ -6,14 +6,17 @@ class TweetsController < ApplicationController
   end
 
   def create
-    @tweet = Tweet.create(tweet_params)
+    @tweet = Tweet.new(tweet_params)
     @tweet.user_id = current_user.id
-    @tweet.save
-    #scheduled with Job
-    TweetScheduler.set(wait_until: @tweet.time).perform_later(@tweet)
-    #test to post tweet now
-    #@tweet.post_to_twitter
-    redirect_to tweets_path
+    if @tweet.save
+      #scheduled with Job
+      TweetScheduler.set(wait_until: @tweet.time).perform_later(@tweet)
+      #test to post tweet now
+      #@tweet.post_to_twitter
+      redirect_to tweets_path
+    else
+      render 'new'
+    end
   end
 
   def index
