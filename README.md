@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application allows a user to schedule a tweet to be posted to their twitter account.
 
-Things you may want to cover:
+Note: a Twitter app key and secret are required to make this app functional. They should be
+kept private and thus are not included in this repository.  See https://apps.twitter.com
 
-* Ruby version
+# Contributing
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Users may contribute to this repository by submitting a pull request or raising an issue.
